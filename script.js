@@ -46,16 +46,16 @@ let calcContainer = document.querySelector(".container");
 
 let input = document.querySelector("#input");
 
-let no1 =document.querySelector("#one");
-let no2 =document.querySelector("#two");
-let no3 =document.querySelector("#three");
-let no4 =document.querySelector("#four");
-let no5 =document.querySelector("#five");
-let no6 =document.querySelector("#six");
-let no7 =document.querySelector("#seven");
-let no8 =document.querySelector("#eight");
-let no9 =document.querySelector("#nine");
-let no0 =document.querySelector("#zero");
+// let no1 =document.querySelector("#one");
+// let no2 =document.querySelector("#two");
+// let no3 =document.querySelector("#three");
+// let no4 =document.querySelector("#four");
+// let no5 =document.querySelector("#five");
+// let no6 =document.querySelector("#six");
+// let no7 =document.querySelector("#seven");
+// let no8 =document.querySelector("#eight");
+// let no9 =document.querySelector("#nine");
+// let no0 =document.querySelector("#zero");
 
 calcContainer.addEventListener("click", (event) => {
     let clicked = event.target;
@@ -71,7 +71,67 @@ calcContainer.addEventListener("click", (event) => {
             break;
         case "four":
             input.value += 4;
-            break;            
+            break;
+        case "five":
+            input.value += 5;
+            break;
+        case "six":
+            input.value += 6;
+            break;
+        case "seven":
+            input.value += 7;
+            break;
+        case "eight":
+            input.value += 8;
+            break;   
+        case "nine":
+            input.value += 9;
+            break;
+        case "zero":
+            input.value += 0;
+            break;
+        case "add":
+            input.value += "+";
+            break;
+        case "substract":
+            input.value += "-";
+            break;
+        case "multiply":
+            input.value += "*";
+            break;
+        case "divide":
+            input.value += "/";
+            break;
+        case "dot":
+            input.value += ".";
+            break;
+        case "equals":
+            input.value += "=";
+            break;
+        case "clear":
+            input.value = "";
+            break;
+        case "two":
+            input.value += 2;
+            break;
+        case "percentage":
+            input.value += "%";
+            break;
+        // case "four":
+        //     input.value += 4;
+        //     break;
+        // case "five":
+        //     input.value += 5;
+        //     break;
+        // case "six":
+        //     input.value += 6;
+        //     break;
+        // case "seven":
+        //     input.value += 7;
+        //     break;
+        // case "eight":
+        //     input.value += 8;
+        //     break;         
         default:
             break;
     }
