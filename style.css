@@ -30,6 +30,7 @@ body{
     /* font-size: x-large; */
     text-align: right;
     margin: 0 auto;
+    border: none;
 }
 
 #input {
@@ -37,6 +38,7 @@ body{
     height: 50px;
     font-size: x-large;
     text-align: right;
+    border: none;
 }
 
 .row {
