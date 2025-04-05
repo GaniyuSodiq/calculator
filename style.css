@@ -46,4 +46,17 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: aliceblue;
+}
+
+.col:hover{
+    background-color: rgb(4, 152, 152);
+}
+
+.col:active{
+    background-color: rgb(18, 202, 202);
+}
+
+#equals{
+    background-color:rgb(10, 3, 108);
 }
