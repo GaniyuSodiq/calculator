@@ -50,8 +50,8 @@ function operate(operator, firstNumber, secondNumber) {
 // operate("*", 6, 2);
 
 let calcContainer = document.querySelector(".container");
-
 let input = document.querySelector("#input");
+let inputMini = document.querySelector("#inputMini");
 
 // let no1 =document.querySelector("#one");
 // let no2 =document.querySelector("#two");
@@ -70,80 +70,98 @@ calcContainer.addEventListener("click", (event) => {
         case "one":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 1;
             break;
         case "two":
             if (equality === "pressed"){
-            input.value = "";
+                input.value = "";
+                inputMini.value = "";
             }
             input.value += 2;
             break;
         case "three":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 3;
             break;
         case "four":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 4;
             break;
         case "five":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 5;
             break;
         case "six":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 6;
             break;
         case "seven":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 7;
             break;
         case "eight":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 8;
             break;   
         case "nine":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 9;
             break;
         case "zero":
             if (equality === "pressed"){
                 input.value = "";
+                inputMini.value = "";
             }
             input.value += 0;
             break;
         case "plus":
             firstNumber = +input.value;
+            input.value += "+";
+            inputMini.value = input.value;
             input.value = "";
             operator = "+";
             break;
         case "substract":
             firstNumber = +input.value;
+            input.value += "-";
+            inputMini.value = input.value;
             input.value = "";
             operator = "-";
             break;
         case "multiply":
             firstNumber = +input.value;
+            input.value += "*";
+            inputMini.value = input.value;
             input.value = "";
             operator = "*";
             break;
         case "divide":
             firstNumber = +input.value;
+            input.value += "/";
+            inputMini.value = input.value;
             input.value = "";
             operator = "/";
             break;
@@ -152,6 +170,7 @@ calcContainer.addEventListener("click", (event) => {
             break;
         case "equals":
             secondNumber = +input.value;
+            inputMini.value += input.value + " =";
             operate(operator, firstNumber, secondNumber);
             firstNumber = 0;
             secondNumber = 0;
@@ -159,6 +178,7 @@ calcContainer.addEventListener("click", (event) => {
             break;
         case "clear":
             input.value = "";
+            inputMini.value = "";
             break;
         case "percentage":
             input.value += "%";

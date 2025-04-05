@@ -23,7 +23,15 @@ body{
     align-items: center;
 }
 
-input {
+#inputMini{
+    width: 99%;
+    /* height: 50px; */
+    /* font-size: x-large; */
+    text-align: right;
+    margin: 0 auto;
+}
+
+#input {
     width: 99%;
     height: 50px;
     font-size: x-large;
