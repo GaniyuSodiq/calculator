@@ -3,6 +3,7 @@
 let firstNumber = 0;
 let operator ;
 let secondNumber = 0 ;
+let equality;
 
 // THE CALCULATOR WILL CONTAIN A FUNCTION OF ALL BASIC MATH
 function add(firstNumber, secondNumber) {
@@ -67,33 +68,63 @@ calcContainer.addEventListener("click", (event) => {
     let clicked = event.target;
     switch (clicked.id) {
         case "one":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 1;
             break;
         case "two":
+            if (equality === "pressed"){
+            input.value = "";
+            }
             input.value += 2;
             break;
         case "three":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 3;
             break;
         case "four":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 4;
             break;
         case "five":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 5;
             break;
         case "six":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 6;
             break;
         case "seven":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 7;
             break;
         case "eight":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 8;
             break;   
         case "nine":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 9;
             break;
         case "zero":
+            if (equality === "pressed"){
+                input.value = "";
+            }
             input.value += 0;
             break;
         case "plus":
@@ -124,12 +155,10 @@ calcContainer.addEventListener("click", (event) => {
             operate(operator, firstNumber, secondNumber);
             firstNumber = 0;
             secondNumber = 0;
+            equality = "pressed"
             break;
         case "clear":
             input.value = "";
-            break;
-        case "two":
-            input.value += 2;
             break;
         case "percentage":
             input.value += "%";
