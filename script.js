@@ -7,36 +7,42 @@ let secondNumber = 0 ;
 // THE CALCULATOR WILL CONTAIN A FUNCTION OF ALL BASIC MATH
 function add(firstNumber, secondNumber) {
     console.log(firstNumber + secondNumber);
+    return (firstNumber + secondNumber);
+
 }
 
 function substract(firstNumber, secondNumber) {
     console.log(firstNumber - secondNumber);
+    return (firstNumber - secondNumber);
 }
 
 function multiply(firstNumber, secondNumber) {
     console.log(firstNumber * secondNumber);
+    return (firstNumber * secondNumber);
 }
 
 function divide(firstNumber, secondNumber) {
     console.log(firstNumber / secondNumber);
+    return (firstNumber / secondNumber);
+
 }
 
 // FUNCTION THAT CALLS THE BASIC MATH FUNCTION DEPENDING ON THE OPERATOR
 function operate(operator, firstNumber, secondNumber) {
     if (operator === "+") {
-       return add(firstNumber, secondNumber);
+       input.value = add(firstNumber, secondNumber);
     }
 
     if (operator === "-") {
-        return substract(firstNumber, secondNumber);
+        input.value = substract(firstNumber, secondNumber);
     }
 
     if (operator === "*") {
-        return multiply(firstNumber, secondNumber);
+        input.value = multiply(firstNumber, secondNumber);
     }
 
     if (operator === "/") {
-        return divide(firstNumber, secondNumber);
+        input.value = divide(firstNumber, secondNumber);
     }
 }
 
@@ -91,22 +97,33 @@ calcContainer.addEventListener("click", (event) => {
             input.value += 0;
             break;
         case "plus":
-            input.value += "+";
+            firstNumber = +input.value;
+            input.value = "";
+            operator = "+";
             break;
         case "substract":
-            input.value += "-";
+            firstNumber = +input.value;
+            input.value = "";
+            operator = "-";
             break;
         case "multiply":
-            input.value += "*";
+            firstNumber = +input.value;
+            input.value = "";
+            operator = "*";
             break;
         case "divide":
-            input.value += "/";
+            firstNumber = +input.value;
+            input.value = "";
+            operator = "/";
             break;
         case "dot":
             input.value += ".";
             break;
         case "equals":
-            input.value += "=";
+            secondNumber = +input.value;
+            operate(operator, firstNumber, secondNumber);
+            firstNumber = 0;
+            secondNumber = 0;
             break;
         case "clear":
             input.value = "";
