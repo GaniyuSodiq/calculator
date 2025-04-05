@@ -1,25 +1,27 @@
+
+// A VARIABLE ONE FOR EACH PART OF THE OPERATION
 let firstNumber = 0;
 let operator ;
 let secondNumber = 0 ;
 
-
+// THE CALCULATOR WILL CONTAIN A FUNCTION OF ALL BASIC MATH
 function add(firstNumber, secondNumber) {
-    return firstNumber + secondNumber;
+    console.log(firstNumber + secondNumber);
 }
 
 function substract(firstNumber, secondNumber) {
-    return firstNumber - secondNumber;
+    console.log(firstNumber - secondNumber);
 }
 
 function multiply(firstNumber, secondNumber) {
-    return firstNumber * secondNumber;
+    console.log(firstNumber * secondNumber);
 }
 
 function divide(firstNumber, secondNumber) {
-    return firstNumber / secondNumber;
+    console.log(firstNumber / secondNumber);
 }
 
-
+// FUNCTION THAT CALLS THE BASIC MATH FUNCTION DEPENDING ON THE OPERATOR
 function operate(operator, firstNumber, secondNumber) {
     if (operator === "+") {
        return add(firstNumber, secondNumber);
@@ -38,3 +40,4 @@ function operate(operator, firstNumber, secondNumber) {
     }
 }
 
+operate("*", 6, 2);
