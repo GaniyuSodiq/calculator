@@ -90,7 +90,7 @@ calcContainer.addEventListener("click", (event) => {
         case "zero":
             input.value += 0;
             break;
-        case "add":
+        case "plus":
             input.value += "+";
             break;
         case "substract":
