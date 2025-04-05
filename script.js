@@ -40,4 +40,4 @@ function operate(operator, firstNumber, secondNumber) {
     }
 }
 
-operate("*", 6, 2);
+// operate("*", 6, 2);
